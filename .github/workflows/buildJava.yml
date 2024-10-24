@@ -17,4 +17,7 @@ jobs:
           distribution: 'corretto'
 
       - name: Build with Maven # pour construire le package avec maven
-        run: mvn -B package --file pom.xml
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+-Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
+            env:
+                SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
