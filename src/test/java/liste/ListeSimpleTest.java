@@ -122,8 +122,11 @@ class ListeSimpleTest {
     @Test
     void supprimePremierPuisListeNull() {
         listeATester.ajout(1);
+	listeATester.ajout(2);
+	listeATester.ajout(2);
 	listeATester.supprimePremier(1);
-	assertEquals("ListeSimple()", listeATester.toString());
+	assertEquals("ListeSimple(Noeud(2), Noeud(2))", listeATester.toString());
+	assertEquals(2, listeATester.getSize());
     }
 
     @Test
