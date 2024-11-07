@@ -55,6 +55,8 @@ class ListeSimpleTest {
 
     @Test
     void modifiePremier() {
+	listeATester.modifiePremier(1, 2);
+    	assertEquals("ListeSimple()", listeATester.toString());
         listeATester.ajout(1);
         listeATester.ajout(2);
         listeATester.ajout(3);
