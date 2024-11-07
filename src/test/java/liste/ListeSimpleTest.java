@@ -272,4 +272,19 @@ class ListeSimpleTest {
         System.out.println(listeATester);
         assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))", listeATester.toString());
     }
+
+
+    @Test
+    void echanger2NoeudsEgaux() {
+        listeATester.ajout(4);
+        listeATester.ajout(4);
+        Noeud r1 = listeATester.tete;
+        listeATester.ajout(4);
+        listeATester.ajout(4);
+        Noeud r2 = listeATester.tete;
+        listeATester.ajout(4);
+        assertEquals("ListeSimple(Noeud(4), Noeud(4), Noeud(4), Noeud(4), Noeud(4))",listeATester.toString());
+        listeATester.echanger(r1, r2);
+        assertEquals("ListeSimple(Noeud(4), Noeud(4), Noeud(4), Noeud(4), Noeud(4))",listeATester.toString());
+    }
 }
