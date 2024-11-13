@@ -28,6 +28,8 @@ jobs:
     name: Déployer la documentation sur GitHub Pages
     runs-on: ubuntu-latest
     needs: generate-docs
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
@@ -37,4 +39,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} 
-          publish_dir: ./public
+          publish_dir: ./target/report/javadoc
+
