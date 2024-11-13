@@ -3,7 +3,7 @@ name: Documentation - Génération et Livraison
 on:
   push:
     branches:
-      - main
+      - dev
 
 permissions:
   contents: write
