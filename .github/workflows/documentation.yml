@@ -1,10 +1,9 @@
 name: Documentation - Génération et Livraison
 
 on:
-  pull_request:
-    types: [closed]
-    branches:
-      - "main"
+  push:
+	branches:
+		dev
 
 permissions:
       contents: write
