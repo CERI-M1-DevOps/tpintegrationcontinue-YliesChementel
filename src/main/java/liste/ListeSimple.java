@@ -15,7 +15,7 @@ public class ListeSimple {
 
     /**
      * Fonction permettant d'ajouter un élément dans la liste 
-     * @param int element élément à rajouter
+     * @param element élément à rajouter
      */
     public void ajout(int element) {
         tete = new Noeud(element, tete);
@@ -24,8 +24,8 @@ public class ListeSimple {
 
     /**
      * Fonction permettant de modifier le premier élément de la liste
-     * @param Object element Le premier élément
-     * @param Object nouvelleValeur élément à modifier
+     * @param element Le premier élément
+     * @param nouvelleValeur élément à modifier
      */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
